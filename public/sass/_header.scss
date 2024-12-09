@@ -1,0 +1,27 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+.header {
+    background-color: $mainColor;
+    height: 70px;
+    @include flex(center,center);
+    .container{
+        @include flex(space-between,center);
+        flex-direction: row;
+
+    }
+    .logo {
+        font-size: 30px;
+        a{
+            color:$fontColor;
+        }
+    }
+    .nav {
+        ul{
+            @include flex(space-between,center);
+            gap:20px;
+            a{
+                color:$fontColor;
+            }
+        }
+    }
+}

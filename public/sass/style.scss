@@ -1,0 +1,37 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./header" as *;
+@use "./add" as *;
+@use "./main" as *;
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontFamilyMain;
+    @include flex(space-between,stretch);
+    flex-direction:column;
+}
+.page-title{
+    text-align: center;
+}
+.container{
+    width: 70dvw;
+    @include flex(center,center);
+    align-self: center;
+}
+.cardial-link{
+    color: inherit;
+}
+.line{
+    @include flex(center,center);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+input{
+    outline: none;
+    border:none;
+}

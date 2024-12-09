@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.header {
+  background-color: royalblue;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.header .logo {
+  font-size: 30px;
+}
+.header .logo a {
+  color: white;
+}
+.header .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.header .nav ul a {
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.todo-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-card {
+  flex-direction: row-reverse;
+  transition: ease-in-out 0.1s;
+}
+.todo-card, .todo-card-edit {
+  width: min(300px, 60dvw);
+  height: 200px;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-card-edit {
+  flex-direction: column;
+}
+.todo-card:hover {
+  background-color: royalblue;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.container {
+  width: 70dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.cardial-link {
+  color: inherit;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */

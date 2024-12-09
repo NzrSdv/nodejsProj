@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../components/head.ejs') %>
+    <title>adding page</title>
+</head>
+<body>
+    <%- include('../components/header.ejs') %>
+    <h1 class="page-title">Add your new todo</h1>
+    <form action="/post-add-todo" method="post">
+        <input type="text" name="title" placeholder="todo description">
+        <input type="submit" value="add new todo">
+    </form>
+    
+</body>
+</html>

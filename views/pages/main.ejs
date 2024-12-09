@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../components/head.ejs') %>
+    <title>main</title>
+  </head>
+  <body>
+    <%- include('../components/header.ejs') %> <% if (data.length > 0) { %>
+    <h1 class="page-title">Todo's to do</h1>
+    <div class="todo-grid">
+      <% data.forEach(element => { %>
+      <a href="/edit-todo/<%=element.id %>" class="cardial-link">
+        <div class="todo-card">
+          <h3 class="description"><%= element.title %></h3>
+          <input type="checkbox" name="isDone" checked="<%= element.isDone%>" />
+        </div>
+      </a>
+      <% }) %>
+    </div>
+
+    <% }else{ %>
+    <h1 class="page-title">there are no todo's to do(</h1>
+    <% } %>
+  </body>
+</html>

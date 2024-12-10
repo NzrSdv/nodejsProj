@@ -8,14 +8,34 @@
     <%- include('../components/header.ejs') %>
     <h1 class="page-title">Edit your todo</h1>
     <div class="container">
-      <form class="todo-card-edit" action="/update-todo?_method=PUT" method="post">
+      <form
+        class="todo-card-edit"
+        action="/update-todo?_method=PUT"
+        method="post"
+      >
         <div class="line">
           <input type="hidden" name="id" value="<%= todo.id%>" />
           <input type="text" name="title" id="" value="<%= todo.title%>" />
-          <input type="checkbox" name="isDone" checked="<%= todo.isDone%>" />
+          <input type="checkbox" name="isDone" <% if (todo.isDone == true ) { %>
+          checked<% }%> />
         </div>
         <input type="submit" value="submit your changes on the todo" />
+        <button id="delete" onclick="deleteToDo('<%= todo.id%>')">
+          Delete the todo
+        </button>
       </form>
     </div>
   </body>
+  <script>
+    async function deleteToDo(id) {
+      try {
+        const res = await fetch(`/delete-todo/${id}`, { method: "DELETE" });
+        if (res.ok) {
+          window.location.href = "/";
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  </script>
 </html>

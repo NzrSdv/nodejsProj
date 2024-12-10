@@ -11,8 +11,10 @@
       <% data.forEach(element => { %>
       <a href="/edit-todo/<%=element.id %>" class="cardial-link">
         <div class="todo-card">
-          <h3 class="description"><%= element.title %></h3>
-          <input type="checkbox" name="isDone" checked="<%= element.isDone%>" />
+          <label for="isDone" class="description"><%= element.title %></label>
+          <input type="checkbox" name="isDone" <% if (element.isDone == true) { %>
+           checked
+          <% } %> />
         </div>
       </a>
       <% }) %>

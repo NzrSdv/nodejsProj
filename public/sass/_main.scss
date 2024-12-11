@@ -10,22 +10,30 @@
   align-items: center;
 }
 .todo-card {
-    &,&-edit{
-        width: min(300px, 60dvw);
-        height: 200px;
-        border: 1px solid $mainColor;
-        border-radius: 10px;
-        @include flex(center,center);
+  & {
+    height: 200px;
+  }
+  &,
+  &-edit {
+    width: min(300px, 60dvw);
+    border: 1px solid $mainColor;
+    border-radius: 10px;
+    @include flex(center, center);
+  }
+  &-edit {
+    height: 300px;
+
+    flex-direction: column;
+    padding: 20px;
+    .line {
+      display: flex;
+      justify-content: space-between;
+      width: 75%;
     }
-    &-edit{
-        flex-direction: column;
-    }
-    flex-direction: row-reverse;
+  }
+  flex-direction: row-reverse;
   transition: ease-in-out 0.1s;
   &:hover {
     background-color: $mainColor;
   }
-  
-}
-.description {
 }

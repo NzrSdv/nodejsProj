@@ -32,8 +32,18 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
+}
+form input {
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  padding: 10px;
+  transition: ease-in-out 0.2s;
+  text-align: center;
+}
+form input:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .todo-grid {
@@ -50,9 +60,11 @@ form {
   flex-direction: row-reverse;
   transition: ease-in-out 0.1s;
 }
+.todo-card {
+  height: 200px;
+}
 .todo-card, .todo-card-edit {
   width: min(300px, 60dvw);
-  height: 200px;
   border: 1px solid royalblue;
   border-radius: 10px;
   display: flex;
@@ -60,7 +72,14 @@ form {
   align-items: center;
 }
 .todo-card-edit {
+  height: 300px;
   flex-direction: column;
+  padding: 20px;
+}
+.todo-card-edit .line {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
 }
 .todo-card:hover {
   background-color: royalblue;
@@ -75,6 +94,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   flex-direction: column;
+  min-height: 100dvh;
 }
 
 .page-title {
@@ -110,6 +130,23 @@ ul {
 input {
   outline: none;
   border: none;
+}
+
+.footer {
+  background-color: royalblue;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .container a {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

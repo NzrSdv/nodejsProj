@@ -6,13 +6,13 @@
   </head>
   <body>
     <%- include('../components/header.ejs') %>
-    <h1 class="page-title">Edit your todo</h1>
     <div class="container">
       <form
-        class="todo-card-edit"
-        action="/update-todo?_method=PUT"
-        method="post"
+      class="todo-card-edit"
+      action="/update-todo?_method=PUT"
+      method="post"
       >
+      <h1 class="page-title">Edit your todo</h1>
         <div class="line">
           <input type="hidden" name="id" value="<%= todo.id%>" />
           <input type="text" name="title" id="" value="<%= todo.title%>" />
@@ -25,6 +25,9 @@
         </button>
       </form>
     </div>
+
+    <%- include('../components/footer.ejs') %>
+
   </body>
   <script>
     async function deleteToDo(id) {

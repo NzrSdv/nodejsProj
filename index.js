@@ -13,6 +13,8 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.set("view engine", "ejs");
 
+
+let state = [todo.find().then(data => data).catch(null)]
 app.get("/", (req, res) => {
   todo
     .find()
